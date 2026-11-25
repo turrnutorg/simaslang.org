@@ -1,0 +1,25 @@
+<nav id="navbar">
+
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <ul id="nav-links">
+        <li id="navbar-item"><a href="">About</a></li>
+        <li id="navbar-item"><a href="">Downloads</a></li>
+        <li id="navbar-item"><a href="">Documentation</a></li>
+        <li id="navbar-item"><a href="">News</a></li>
+    </ul>
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const navLinks = document.getElementById("nav-links");
+
+        hamburgerBtn.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        hamburgerBtn.setAttribute("aria-expanded", isOpen);
+        });
+
+    </script>
+</nav>
