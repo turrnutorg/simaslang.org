@@ -1,0 +1,88 @@
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/nav.css">
+        <link rel="icon" href="/assets/favicon.ico">
+        <title>SIMAS</title>
+    </head>
+
+    <body>
+        <div id="navbar-placeholder">
+            
+        </div>
+
+        <div id="stuffs">
+            <main class="container">
+                <article>
+                    <div style="text-align: center;">
+                        <h1 class="page-heading">Okay, but what <em>is</em> SIMAS?</h1>
+                        <p>Well, I'm glad you asked!</p>
+                        <hr>
+                    </div>
+                    <div style="text-align: center;">
+                        <h1 class="page-heading">SIMAS, in a nutshell.</h1>
+                        <p>
+                            SIMAS, which stands for <strong>SIM</strong>ple <strong>AS</strong>sembly,
+                            is a programming language designed around having high-level features (such as dynamic typing,
+                            automatic variable creation, lists, implicit type conversion, et cetera) while retaining a low-level
+                            syntax, reminiscient of Assembly.
+                            <br>
+                            As such, SIMAS is an <em>assembly-like</em> language. It is not assembly, but it <em>resembles</em> assembly.
+                        </p>
+                        <hr>
+                    </div>
+                <div style="text-align: center;">
+                    <h1 class="page-heading">Okay, but what is it like?</h1>
+                    <p>
+                        As mentioned earlier, SIMAS is assembly-like. This means that the general structure of the language resembles assembly.
+                        <br>
+                        A good example of this would be:                        
+                    </p>
+                    <pre><code>add num var1 420;</code></pre>
+                    <p>
+                        where <code>add</code> is the instruction, and <code>num</code>, <code>var1</code>, and <code>420</code> are the operands.
+                        <br>
+                        Additionally, this further resembles assembly, as var1 is directly overwritten with the result of the addition operation 
+                        just like in real assembly, where, for example: 
+                    </p>
+                    <pre><code>add ax, bx</code></pre>
+                    <p>
+                        would overwrite <code>AX</code> with the result.
+                    </p>
+                    <p>
+                        However, one immediate area where you can see a difference is with the <code>num</code> operand, as 
+                        SIMAS is an explicitly (though dynamically) typed language, which is radically different from assembly (where it's all just numbers).
+                        <br>
+                        SIMAS supports three fundamental data types: NUM (a double-precision floating point number), STR (a string of characters), and BOOL (a boolean, true or false).
+                        <br>
+                        These three data types hold up the core instructions of the SIMAS language, and as a bonus, all three can be freely converted between.
+                    </p>
+                    <hr>
+                </div>
+                </article>
+            </main>
+
+            <footer id="footer-placeholder">
+
+            </footer>
+        </div>
+
+        <script defer>
+            fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+
+            fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+        </script>
+    </body>
+</html>
