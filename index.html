@@ -1,29 +1,102 @@
+<!-- SOMETHING WICKED THIS WAY COMES -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>SIMAS</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/nav.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="icon" href="/assets/favicon.ico">
+        <title>SIMAS</title>
+    </head>
 
-<body>
-    <div id="navbar-placeholder">
+    <body>
+        <div id="navbar-placeholder">
+            
+        </div>
 
-    </div>
+        <div id="stuffs">
+            <main class="container">
+                <div class="container" id="simas-intro">
+                    <div style="margin-bottom: -20px;">
+                        <img src="/assets/simas.png" style="max-width: 500px; max-height: 500px;" alt="The SIMAS Programming Language Logo.">
+                        <figcaption>The official logo for SIMAS.</figcaption>
+                    </div>
+                    <div style="text-align: center; width: 100%;">
+                        <h1 class="page-heading" style="text-decoration: underline; margin-bottom: -10px;">The SIMAS Programming Language.</h1>
+                        <p style="font-size: 22px;">
+                            The most powerful assembly-like language to date.<br>
+                            SIMAS (<strong>SIM</strong>ple <strong>AS</strong>sembly) is a high-level yet low-level-feeling language, created by the Turrnut Open Source Organisation.<br>
+                            In this page, you will find out just how amazing the SIMAS Programming Language truly is.
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="container" id="simas-blurbs">
+                    <h1 style="font-size: 36px;">Why pick SIMAS?</h1>
+                    <div class="container info-card">
+                        <h1>Speed.</h1>
+                        <p>SIMAS, with all its simplicity, comes a lot of speed. SIMAS is a fast-running language that not only runs quickly, but is also quick to get using.</p>
+                    </div>
+                    <div class="container info-card">
+                        <h1>Ease of use.</h1>
+                        <p>SIMAS is one of the <em>simplest</em> languages out there, with a stupidly simple syntax and an instruction set understandable to almost anybody.</p>
+                    </div>
+                    <div class="container info-card">
+                        <h1>Educational.</h1>
+                        <p>
+                            Not only is SIMAS a pleasant language to use, but it's worth noting the education value it brings, with its assembly-like syntax and behaviours 
+                            being <em>perfect</em> for someone who wants to get into assembly.
+                            <br>
+                            Not only that, but SIMAS also holds educational value in the sense that you can gain tremendous amounts of experience by writing your very own SIMAS
+                            implementation. 
+                        </p>
+                    </div>
+                    <div class="container info-card">
+                        <h1>Choice.</h1>
+                        <p>
+                            SIMAS is a wide language, with multiple different implementations to choose from. 
+                            <br>
+                            Your aren't just stuck choosing between two different options, as SIMAS offers many different choices to cater to your own needs.
+                            <br>
+                            Want to integrate SIMAS in the web? Choose SIMASJS! Want low-level speed and tight performance? CMAS! Want a user-friendly GUI? Objective-CMAS!
+                            <br>
+                            There's an implementation for everything, and at least one of them has your name on it.
+                        </p>
+                    </div>
+                    <div class="container info-card">
+                        <h1>Support.</h1>
+                        <p>
+                            SIMAS is an actively developed language, with maintenance and new updates constantly.
+                            <br>
+                            SIMAS will be there whenever you need it, at your beck and call, and never stale.
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="container" id="demo">
+                    <h1 style="font-size: 36px;">Not sure yet? Try it out!</h1>
+                </div>
+            </main>
 
-    <main id="content-box">
+            <footer id="footer-placeholder">
 
-        <h1>The SIMAS Programming Language</h1>
-    </main>
+            </footer>
+        </div>
 
-    <script defer>
-        fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
-        });
-    </script>
+        <script defer>
+            fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
 
-</body>
+            fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+        </script>
+    </body>
 </html>

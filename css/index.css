@@ -1,0 +1,28 @@
+#simas-intro {
+  align-items: center;
+  margin: 50px;
+  margin-bottom: 0;
+}
+
+#simas-blurbs {
+    align-items: center;
+    width: 100%;
+}
+
+.info-card {
+    border: 5px solid darkgreen;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    width: 50vw;
+}
+
+.info-card h1 {
+    margin-bottom: -10px;
+}
+
+hr {
+    width: 100%;
+}

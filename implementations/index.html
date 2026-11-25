@@ -1,0 +1,53 @@
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/nav.css">
+        <link rel="icon" href="/assets/favicon.ico">
+        <title>SIMAS</title>
+    </head>
+
+    <body>
+        <div id="navbar-placeholder">
+            
+        </div>
+
+        <div id="stuffs">
+            <main class="container">
+                <div style="text-align: center;">
+                    <h1 class="page-heading">SIMAS Implementations</h1>
+                    <p style="font-size: 22px;">Take your pick from a wide array of SIMAS implementations, each with their own strengths (and weaknesses).</p>
+                    <hr>
+                </div>
+                <div id="simas-implementations">
+
+                </div>
+            </main>
+
+            <footer id="footer-placeholder">
+
+            </footer>
+        </div>
+
+        <script src="/ecmascript/implementationLoader.js">
+            
+        </script>
+        <script defer>
+            (async () => { let thing = await getImplementations(); console.log(thing); })();
+            fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+
+            fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+        </script>
+    </body>
+</html>
