@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @font-face {
   font-family: Calbiri; /* intentional typo */
   src: url('/assets/calibri.ttf') format('truetype'); /* believe it or not, macOS doesnt have calibri built in! crazy i know */
@@ -28,6 +37,7 @@ html, body {
   min-height: 0;
   align-items: center;
   justify-content: space-evenly;
+  animation: fadeIn 0.8s ease-in forwards;
 }
 
 main {
