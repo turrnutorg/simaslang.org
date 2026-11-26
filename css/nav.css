@@ -1,7 +1,11 @@
-#title {
+#title, #nav-heading {
   display: flex;
   align-items: center;
-  width: 75%;
+  margin: 8px;
+}
+
+#nav-heading {
+  justify-content: space-between;
 }
 
 #title a {
@@ -38,7 +42,6 @@
     margin: 10px;
     justify-content: space-around;
     align-items: center;
-    
 }
 
 #navbar ul li {
@@ -51,10 +54,9 @@
 #navbar ul li a:hover   { text-decoration: none; background-color:darkcyan;}
 
 #logo {
-  width: 75px;
-  height: 75px;
-  margin: 8px;
-  margin-bottom: -1px;
+  max-width: 50px;
+  max-height: 50px;
+  margin-bottom: -10px;
 }
 
 .hamburger {
@@ -84,8 +86,29 @@
     display: flex;
   }
 
+  #nav-links-div {
+    display: none;
+  }
+
+  #nav-links-div.open {
+    display: flex;
+  }
+
+  #nav-links {
+    display: none;
+  }
+
   #nav-links.open {
     display: flex;
+    flex-direction: column;
+  }
+
+  #nav-heading {
+    width: 100%;
+  }
+
+  #navbar {
+    flex-direction: column;
   }
 }
 

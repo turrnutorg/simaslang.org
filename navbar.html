@@ -1,30 +1,38 @@
 <nav id="navbar">
-    <div id="title">
-        <div><a href="/"><img src="/assets/simas.png" id="logo"></a> </div>
-        <div><a href="/" id="lang-name"></a></div>
+    <div id="nav-heading">
+        <div id="title">
+            <div><a href="/"><img src="/assets/simas.png" id="logo"></a> </div>
+            <div><a href="/" id="lang-name"></a></div>
+        </div>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 
-    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
 
-    <ul id="nav-links">
-        
-        <li id="navbar-item"><a href="/about/">About</a></li>
-        <li id="navbar-item"><a href="/implementations/">Versions</a></li>
-        <li id="navbar-item"><a href="/docs/">Documentation</a></li>
-        <li id="navbar-item"><a href="/newsfeed/">News</a></li>
-    </ul>
+    <div id="nav-links-div">
+        <ul id="nav-links">
+            <li id="navbar-item"><a href="/about/">About</a></li>
+            <li id="navbar-item"><a href="/implementations/">Versions</a></li>
+            <li id="navbar-item"><a href="/docs/">Documentation</a></li>
+            <li id="navbar-item"><a href="/newsfeed/">News</a></li>
+        </ul>
+    </div>
+    
     <script>
         const hamburgerBtn = document.getElementById("hamburger-btn");
         const navLinks = document.getElementById("nav-links");
+        const navLinksDiv = document.getElementById("nav-links-div");
+
+        console.log(hamburgerBtn);
 
         hamburgerBtn.addEventListener("click", () => {
-        const isOpen = navLinks.classList.toggle("open");
-        hamburgerBtn.setAttribute("aria-expanded", isOpen);
+            const isOpen = navLinks.classList.toggle("open") && navLinksDiv.classList.toggle("open");
+            console.log(isOpen);
+            hamburgerBtn.setAttribute("aria-expanded", isOpen);
         });
-
     </script>
 </nav>
