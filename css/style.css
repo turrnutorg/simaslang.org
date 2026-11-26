@@ -1,10 +1,16 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
+    transform: translateY(0px);
   }
+}
+
+.fades-in {
+  animation: fadeIn 0.8s ease-in forwards;
 }
 
 @font-face {
@@ -19,7 +25,6 @@ html, body {
   width: 100%;
   height: 100%;
   max-width: 100dvw;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -27,23 +32,22 @@ html, body {
 #stuffs {
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
   height: 100%;
   min-width: 100dvw;
-  width: 100%;
-  max-width: 100dvw;
+  width: 100dvw;
   overflow: auto;
   flex: 1;
   min-height: 0;
   align-items: center;
   justify-content: space-evenly;
-  animation: fadeIn 0.8s ease-in forwards;
 }
 
 main {
   align-items: center;
   flex: 1;
   max-width: 1024px;
+  width: 75dvw;
+  animation: fadeIn 0.8s ease-in forwards;
 }
 
 .container {

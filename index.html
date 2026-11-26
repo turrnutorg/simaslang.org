@@ -19,11 +19,13 @@
         <div id="stuffs">
             <main class="container">
                 <div class="container" id="simas-intro">
-                    <div style="margin-bottom: -20px;">
-                        <img src="/assets/simas.png" style="max-width: 500px; max-height: 500px;" alt="The SIMAS Programming Language Logo.">
-                        <figcaption>The official logo for SIMAS.</figcaption>
+                    <div style="margin-bottom: -20px;" class="fades-in">
+                        <figure>
+                            <img src="/assets/simas.png" style="max-width: 500px; max-height: 500px; width: 100%;" alt="The SIMAS Programming Language Logo.">
+                            <figcaption>The official logo for SIMAS.</figcaption>
+                        </figure>
                     </div>
-                    <div style="text-align: center; width: 100%;">
+                    <div style="text-align: center; width: 100%;" class="fades-in">
                         <h1 class="page-heading" style="text-decoration: underline; margin-bottom: -10px;">The SIMAS Programming Language.</h1>
                         <p style="font-size: 22px;">
                             The most powerful assembly-like language to date.<br>
@@ -33,7 +35,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="container" id="simas-blurbs">
+                <div class="container fades-in" id="simas-blurbs">
                     <h1 style="font-size: 36px;">Why pick SIMAS?</h1>
                     <div class="container info-card">
                         <h1>Speed.</h1>
@@ -85,11 +87,13 @@
             </footer>
         </div>
 
+        <script src="/ecmascript/nav.js"></script>
         <script defer>
             fetch('/navbar.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar-placeholder').innerHTML = data;
+                awaken();
             });
 
             fetch('/footer.html')
