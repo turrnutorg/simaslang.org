@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/nav.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="icon" href="/assets/favicon.ico">
+        <title>SIMAS - 404</title>
+    </head>
+
+    <body>
+        <div id="navbar-placeholder">
+            
+        </div>
+
+        <div id="stuffs">
+            <main class="container">
+                <div class="container" id="simas-intro">
+                   
+                    <div style="text-align: center; width: 100%;" class="fades-in">
+                        <h1 class="page-heading" style="text-decoration: underline; margin-bottom: -10px;">404 Not Found</h1>
+                        <p style="font-size: 22px;">
+                            Oh my! Are you lost? The page you requested does not exist. Here, click this to return home:
+                        </p>
+                    </div>
+
+                    <h1><a href="/">Return to Home</a></h1>
+                </div>
+                
+            </main>
+
+            <footer id="footer-placeholder">
+
+            </footer>
+        </div>
+
+        <script src="/ecmascript/nav.js"></script>
+        <script defer>
+
+            fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+        </script>
+    </body>
+</html>
