@@ -7,7 +7,7 @@ async function getImplementations() {
         let objects = [];
         for (let i = 0; i < items.length; i++) {
             const stuff = await fetch("/implementations/" + items[i] + "/about.json");
-            if (!stuff.ok) throw new Error("uhhh shit failed, " + manifest.status);
+            if (!stuff.ok) throw new Error("uhhh shit failed, " + stuff.status);
             const jason2 = await stuff.json();
             objects.push(jason2);
         }
@@ -15,4 +15,8 @@ async function getImplementations() {
     } catch {
         console.error("implementations died :(");
     }
+}
+
+function makeImplementation(implementation) {
+
 }

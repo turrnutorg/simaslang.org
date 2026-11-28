@@ -26,13 +26,25 @@
 
                 </div>
             </main>
-
-            <footer id="footer-placeholder">
-
-            </footer>
         </div>
 
-        <script src="/ecmascript/implementationLoader.js"></script>
+        <footer id="footer-placeholder">
+
+        </footer>
+
+        <script src="/ecmascript/implementationLoader.js">
+            (async () => {
+                const implementations = await getImplementations();
+                const element = document.getElementById(simas-implementations);
+                if (implementations == undefined) {
+                    const sorry = document.createElement("h2");
+                    sorry.innerText = "Sooo... the list of SIMAS implementations failed to load. Sorry!";
+                    element.appendChild(sorry);
+                    return;
+                }
+                for (let i = 0; i < implementations.length; i++) element.appendChild(makeImplementation(implementations[i]));
+            })();
+        </script>
         <script src="/ecmascript/nav.js"></script>
         <script defer>
             fetch('/navbar.html')
