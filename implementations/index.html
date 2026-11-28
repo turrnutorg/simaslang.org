@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/nav.css">
+        <link rel="stylesheet" href="/css/implementations.css">
         <link rel="icon" href="/assets/favicon.ico">
         <title>SIMAS</title>
     </head>
@@ -32,19 +33,7 @@
 
         </footer>
 
-        <script src="/ecmascript/implementationLoader.js">
-            (async () => {
-                const implementations = await getImplementations();
-                const element = document.getElementById(simas-implementations);
-                if (implementations == undefined) {
-                    const sorry = document.createElement("h2");
-                    sorry.innerText = "Sooo... the list of SIMAS implementations failed to load. Sorry!";
-                    element.appendChild(sorry);
-                    return;
-                }
-                for (let i = 0; i < implementations.length; i++) element.appendChild(makeImplementation(implementations[i]));
-            })();
-        </script>
+        <script src="/ecmascript/implementationLoader.js"></script>
         <script src="/ecmascript/nav.js"></script>
         <script defer>
             fetch('/navbar.html')
@@ -59,6 +48,18 @@
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
+
+            (async () => {
+                let implementations = await getImplementations();
+                const element = document.getElementById("simas-implementations");
+                if (implementations == null) {
+                    const sorry = document.createElement("h2");
+                    sorry.innerText = "Sooo... the list of SIMAS implementations failed to load. Sorry!";
+                    element.appendChild(sorry);
+                    return;
+                }
+                for (let i = 0; i < implementations.length; i++) element.appendChild(makeImplementation(implementations[i]));
+            })();
         </script>
     </body>
 </html>

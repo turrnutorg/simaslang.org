@@ -1,6 +1,8 @@
 {
+    "name": "CMAS",
     "description": "CMAS, the odd one out of them all. It's got the low level speed and is light on resources, while being a marked step up from prior implementations. However, it is, arguably, the least impressive of the three for your average user :(",
     "logo": "cmas.png",
     "langlogo": "clang.png",
+    "lang": "C",
     "website": "/implementations/CMAS"
 }

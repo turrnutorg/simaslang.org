@@ -1,6 +1,8 @@
 {
+    "name": "SIMASJS",
     "description": "SIMASJS, the original you all know and love. The very first, but not least, implementation of SIMAS, written in JavaScript. Has some cool features none of the others have.",
     "logo": "simas.png",
     "langlogo": "jslang.png",
+    "lang": "JavaScript",
     "website": "/implementations/SIMASJS"
 }
