@@ -1,0 +1,82 @@
+<!-- css is hell -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/nav.css">
+        <link rel="stylesheet" href="/css/hell.css">
+        <link rel="icon" href="/assets/hell.ico">
+        <title>SIMAS</title>
+    </head>
+
+    <body>
+        
+        <audio autoplay loop>
+            <source src="/assets/hell.mp3" type="audio/mpeg">
+        </audio>
+        <div id="navbar-placeholder">
+            
+        </div>
+
+        <div id="stuffs">
+            <main class="container">
+                <article>
+                    <h1 class="unholiness regret">poem of the michaels</h1>
+                    <p class="unholiness regret">
+                    life is like a door<br>
+                    never trust a cat<br>
+                    because the moon can't swim<br>
+                    </p>
+                    <p class="unholiness regret">
+                    but they live in your house<br>
+                    even though they don't like breathing in<br>
+                    dead oxygen that's out of warranty<br>
+                    </p>
+                    <p class="unholiness regret">
+                    when the gods turn to glass<br>
+                    you'll be drinking lager out of urns<br>
+                    and eating peanut butter with mud<br>
+                    </p>
+                    <p class="unholiness regret">
+                    bananas wear socks in the basement<br>
+                    because time can't tie its own shoes<br>
+                    and the dead spiders are unionising<br>
+                    </p>
+                    <p class="unholiness regret">
+                    and a microwave is just a haunted suitcase<br>
+                    henceforth gravity owes me twenty bucks<br>
+                    because the couch is plotting against the fridge<br>
+                    </p>
+                    <p class="unholiness regret">
+                    when pickles dream in binary<br>
+                    the mountain dew solidifies<br>
+                    into a 2007 toyota corolla<br>
+                    </p>
+                </article>
+                <h1>⛧⛧⛧</h1>
+            </main>
+        </div>
+
+        <footer id="footer-placeholder">
+
+        </footer>
+
+        <script src="/ecmascript/nav.js"></script>
+        <script defer>
+            fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                awaken();
+            });
+
+            fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+        </script>
+    </body>
+</html>

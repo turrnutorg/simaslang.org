@@ -70,6 +70,14 @@
   background-color: #fff;
 }
 
+#hell {
+  opacity: 0%;
+}
+
+#hell:hover {
+  opacity: 3%;
+}
+
 @media (max-width: 1280px) {
     #lang-name::after {
         content: "SIMAS";
