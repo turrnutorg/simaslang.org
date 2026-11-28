@@ -1,0 +1,104 @@
+/*
+    css:
+    Committing
+    Suicide
+    Soon
+
+    ok for legal purposes (and so i dont get checked on) this is a joke
+    i just FUCKING hate CSS
+    FUCK YOU cascading style sheets
+    appkit is saner than this fucking bullshit
+    appkit is nice
+    appkit forces you to say what you want and does what you want
+    CSS spits on your fucking face when you tell it what you *might* want
+    and then does whatever the fuck it wants to cause fuck me
+    legit all of this website is just dirty fucking hacks because THE ONLY FUCKING WAY CSS COOPERATES IS WITH SHITTY HACK WORKAROUNDS
+    anyways sorry for this rant
+    considering this is simaslang.org 
+    i should be more
+    uh
+    "professional"
+    pfft
+    yeah right
+*/
+
+.implementation-card {
+    border: 5px solid darkgreen;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    width: 50dvw;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.implementation-logo, .implementation-lang {
+    max-width: 100px;
+    max-height: 100px;
+    min-width: 10px;
+    min-height: 10px;
+    width: auto;
+    height: auto;
+}
+
+.implementation-lang {
+    padding: 5px;
+    border: 2px solid darkgreen;
+    border-radius: 5px;
+}
+
+.implementation-info {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.implementation-info div {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.implementation-language {
+    align-items: flex-end;
+}
+
+.implementation-card div {
+    width: 100%;
+    margin: 5px;
+}
+
+.implementation-stuff h2 {
+    text-align: center;
+}
+
+.implementation-card hr {
+    width: 100%;
+}
+
+.implementation-stuff {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.implementation-card a {
+    border: 1px solid darkgreen;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 5px;
+    background-color: darkgreen;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .implementation-card {
+        width: 100%;
+    } 
+}

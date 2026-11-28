@@ -1,0 +1,60 @@
+@font-face {
+    font-family: hell;
+    src: url("/assets/hell.ttf") format("truetype");
+}
+
+#navbar, footer {
+    background: none;
+}
+
+#lang-name::after {
+    content: "YOU ARE IN HELL";
+}
+
+#logo {
+    display: none;
+}
+
+.unholiness {
+    font-family: hell;
+    font-size: 16px;
+}
+
+.regret {
+    color: #780606;
+    text-align: center;
+}
+
+.navbar-item a {
+    font-family: hell;
+    color: maroon;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(#000000, #780606);
+    animation: none;
+}
+
+main {
+    animation: none;
+}
+
+@media (max-width: 1280px) {
+    #lang-name::after {
+        content: "⛤";
+    }
+}
+
+@media (max-width: 320px) {
+    #lang-name::after {
+        content: "⛤";
+    }
+}
+
+
+@media (max-width: 768px) {
+    #nav-links.open {
+        background: none;
+    }
+}
